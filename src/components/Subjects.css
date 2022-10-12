@@ -1,0 +1,37 @@
+.Subjects {
+  background: blueviolet;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subject {
+  background: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 130px;
+}
+
+.subject-selected {
+  background: grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 130px;
+  color: white;
+}
+
+.selected-subject {
+  margin-top: 20px;
+}

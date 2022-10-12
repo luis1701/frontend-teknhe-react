@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Subjects from './components/Subjects';
 
 function App() {
   const [subjects, setSubjects] = useState([])
@@ -26,25 +27,14 @@ function App() {
     school: 'Americano',
   }
 
-  console.log(subjects)
-
-  const getSubjectsWithFormat = () => {
-    return subjects.map((subject, indice) => {
-      if (subjects.length - 1 === indice) {
-        return ` ${subject}.`
-      }
-      return ` ${subject},`
-    })
-  }
-
   return (
     <div className="App">
+      <Subjects subjects={subjects} />
       <h1>Datos del estudiante</h1>
       <p>Nombre: {student.name}</p>
       <p>Apellidos: {student.lastName}</p>
       <p>Edad: {student.age}</p>
       <p>Colegio: {student.school}</p>
-      <p>Materias: {getSubjectsWithFormat()}</p>
     </div>
   );
 }

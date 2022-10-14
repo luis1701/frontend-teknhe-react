@@ -4,7 +4,7 @@ import './Subjects.css';
 
 const mainSubjects = ['matematicas', 'lenguaje']
 
-function Subjects({ subjects }) {
+function Subjects({ subjects, reset }) {
   
   const [selectedSubject, setSelectedSubject] = useState('ninguna')
   const [isSelectedSubjectMain, setIsSelectedSubjectMain] = useState(false)
@@ -17,6 +17,12 @@ function Subjects({ subjects }) {
       setIsSelectedSubjectMain(false)
     }
   }, [selectedSubject])
+
+  useEffect(() => {
+    console.log('reset aplicado')
+    setSelectedSubject('ninguna')
+    setIsSelectedSubjectMain(false)
+  }, [reset])
 
   
   return (
